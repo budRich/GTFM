@@ -1,0 +1,83 @@
+.TH GTFM 1 2018\-08\-09 Linux "User Manuals"
+.SH NAME
+.PP
+\fB\fCGTFM\fR \- get the \fIfine\fP manual
+
+.SH SYNOPSIS
+.PP
+\fB\fCGTFM\fR [\fB\fC\-v\fR|\fB\fC\-h\fR|\fB\fC\-l\fR]
+.br
+\fB\fCGTFM\fR WIKI
+
+.SH DESCRIPTION
+.PP
+Download documentation from git and the web for
+offline reading.
+
+.PP
+If \fB\fCGTFM\fR is executed without any commandline options,
+all wikis defined in \fB\fCGTFM\_CONFIG\fR, will get updated
+or downloaded and copied to \fB\fCGTFM\_TARGET\_DIR\fR\&.
+
+.PP
+If a name of a WIKI is the last argument to \fB\fCGTFM\fR,
+only that WIKI will  get updated or downloaded and
+copied to \fB\fCGTFM\_TARGET\_DIR\fR\&.
+
+.PP
+See the default \fB\fCGTFM\_CONFIG\fR (\fIdoclist.ini\fP) for
+availbe configuration.
+
+.SH OPTIONS
+.PP
+\fB\fC\-v\fR
+.br
+Show version and exit.
+
+.PP
+\fB\fC\-h\fR
+.br
+Show help and exit.
+
+.PP
+\fB\fC\-l\fR
+.br
+Prints a list of all wikis defined in \fB\fCGTFM\_CONFIG\fR\&.
+
+.SH ENVIRONMENT
+.PP
+GTFM\_CONFIG defaults to \fI$THIS\_DIR/doclist.ini\fP
+.br
+configuration file always read by the script.
+
+.PP
+GTFM\_TARGET\_DIR defaults to \fI$PWD/trg\fP
+.br
+General target directory where to store documentation.
+Can either be set with a ENVIRONMENT\_VARIALBE or in
+\fB\fCGTFM\_CONFIG\fR\&. It is possible to specify different
+target direcories for different wikis in \fB\fCGTFM\_CONFIG\fR\&.
+
+.PP
+GTFM\_SOURCE\_DIR defaults to \fI$PWD/src\fP
+.br
+General directory where to download documentation
+source. Can either be set with a ENVIRONMENT\_VARIALBE
+or in \fB\fCGTFM\_CONFIG\fR\&.
+
+.SH DEPENDENCIES
+.PP
+html2text
+.br
+git
+
+.SH AUTHOR
+.PP
+budRich 
+\[la]robstenklippa@gmail.com\[ra]
+
+\[la]https://budrich.github.io\[ra]
+
+.SH SEE ALSO
+.PP
+git(1), html2text(1)
